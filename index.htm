@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Modal Dialog Test</title>
+	<script src="js-core/jquery2.0.3.js"></script>
+	<script src="js-core/jqueryextend.js"></script>
+	<script src="js/mdialog.js"></script>
+</head>
+<body>
+	<div id="stdDialog">
+		This is some text
+	</div>
+
+	<div id="modalDialog" style="display:none;">
+		Lorem ipsum
+		<div class="modalSBottom">
+			<button>Submit</button>
+			<button>Cancel</button>
+		</div>
+	</div>
+
+	<div id="largeDialog">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum earum repellat accusantium dolor quasi voluptate nobis voluptatum unde saepe sed. Quis et animi praesentium aperiam aliquam inventore. Saepe, quo, id.
+	</div>
+
+	<script>
+		var stdDialog = new Dialog("stdDialog","Standard Dialog",200,100);
+		var modalDialog = new Dialog("modalDialog","Modal Dialog",200,100);
+		var largeDialog = new Dialog("largeDialog","Large Dialog",800,600);
+	</script>
+
+	<a href="javascript:stdDialog.showDialog();">Standard Dialog</a><br>
+	<a href="javascript:modalDialog.showDialog();">Modal Dialog</a><br>
+	<a href="javascript:largeDialog.showDialog();">Large Dialog</a>
+</body>
+</html>
